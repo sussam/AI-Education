@@ -8,7 +8,8 @@ body {
 
 /*Navbar Styling*/
 .navbar {
-    background-color: #9B93F2 !important;
+    background-color: #219F80 !important;
+    border-radius: 0%;
 }
 
 .navbar-brand {
@@ -50,6 +51,17 @@ hr {
     margin-top: -10px;
 }
 
+#post_txt {
+    width: 100%;
+    height: 70px;
+    border: 2px transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+    padding-bottom: 40px;
+    padding-left: 12px;
+}
+
 #post_button {
     float: right;
     align-items: right;
@@ -57,11 +69,10 @@ hr {
 
 .block-buttons {
     position: relative;
-    padding-top: 15px;
 }
 
 .block-buttons .btn-group {
-	width: 100%;
+    width: 100%;
 }
 
 .block-buttons button {
@@ -83,6 +94,19 @@ hr {
     width: 75px;
     display: inline-block;
     object-fit: cover;
+}
+
+#tags img {
+    border-radius: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+/*ADS*/
+#ad img {
+    border-radius: 0% !important;
+    height: 100%;
+    width: 100%;
 }
 
 /*Search*/
@@ -205,13 +229,3 @@ img {
 .friends_prof li {
     padding-bottom: 30px;
 }
-
-
-
-
-/*Footer*/
-footer {
-    background-color: #9B93F2;
-    color: white;
-    padding: 15px;
-        }

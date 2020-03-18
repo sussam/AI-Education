@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
 
 </head>
 
 <body>
 
-    <nav class="navbar ">
-        <div class="container-fluid">
+    <nav class="navbar">
+        <div class=" container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Logo</a>
+                <a class="navbar-brand" href="#">Social</a>
             </div>
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group input-group">
@@ -37,34 +38,101 @@
 
     <div class="container text-center">
         <div class="row" id="whole">
-            <div class="col-sm-3 well">
-                <p>Groups</p>
-                <hr>
-                <ul class="text-left" id="group_list">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> UF Class of 2021</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Humane Society</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> UF Women in CS</a></li>
-                </ul>
-                <br>
-                <a href="groups.html"><button type="button" class="btn btn-default btn-sm btn-block">Discover
-                </a></button>
+            <div class="col-sm-3">
+                <div class="well">
+                    <p><b>Groups</b></p>
+                    <hr>
+                    <ul class="text-left" id="group_list">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> UF Class of 2021</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Humane Society</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> UF Women in CS</a></li>
+                    </ul>
+                    <br>
+                    <a href="groups.html"><button type="button" class="btn btn-default btn-sm btn-block">Discover
+                    </a></button>
+                </div>
+                <div class="well">
+                    <p><b>Suggested Friends</b></p>
+                    <hr>
+                    <ul class="text-left" id="suggested_friends">
+                        <div class="row" id="individ_suggested">
+                            <div class="col">
+                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
+                                    <br> Tampa, Florida
+                                </li>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-default btn-sm" type="button">
+                                    <span class="glyphicon glyphicon-plus"></span>Add
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row" id="individ_suggested">
+                            <div class="col">
+                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
+                                    <br>Tampa, Florida</li>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-default btn-sm" type="button">
+                                    <span class="glyphicon glyphicon-plus"></span>Add
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row" id="individ_suggested">
+                            <div class="col">
+                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
+                                    <br>Tampa, Florida</li>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-default btn-sm" type="button">
+                                    <span class="glyphicon glyphicon-plus"></span>Add
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row" id="individ_suggested">
+                            <div class="col">
+                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
+                                    <br>Tampa, Florida</li>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-default btn-sm" type="button">
+                                    <span class="glyphicon glyphicon-plus"></span>Add
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row" id="individ_suggested">
+                            <div class="col">
+                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
+                                    <br>Tampa, Florida</li>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-default btn-sm" type="button">
+                                    <span class="glyphicon glyphicon-plus"></span>Add
+                                </button>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
             </div>
 
             <div class="col-sm-7">
-
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="panel panel-default text-left">
                             <div class="panel-body">
-                                <p contenteditable="true">Create Post</p>
+                                <p contenteditable="true">
+                                    <span class="glyphicon glyphicon-user"></span> Create Post</p>
                                 <hr>
-                                <span class="glyphicon glyphicon-user"></span> What's on your mind?
-                                <button type="button" class="btn btn-default btn-sm" id="post_button"> Post
+                                <input type="text" id="post_txt" placeholder="What are you thinking?" class="text-left">
+                                <button type="button" class="btn btn-default btn-sm" id="post_button"
+                                    onclick="post_now()"> Post
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div id="input_post"></div>
 
                 <div class="row well" id="post_well">
                     <div class="col-sm-3">
@@ -73,13 +141,17 @@
                             <br>1 hr ago</p>
                     </div>
 
-                    <div class="col-sm-9">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot
-                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                    <div class="col-sm-9" id="tags">
+                        <p>Just Forgot that I had to mention something about someone to someone about how I
+                            forgot
+                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.
+                        </p>
+                        <img src="tag_pic.jpg">
                         <hr class="line_post">
+                        <p id="1" class="text-left"></p>
                         <div class="block-buttons">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-sm ">
+                                <button type="button" class="btn btn-default btn-sm" onclick="liked1()">
                                     <span class="glyphicon glyphicon-thumbs-up"></span> Like
                                 </button>
                                 <button type="button" class="btn btn-default btn-sm ">
@@ -98,12 +170,15 @@
                     </div>
 
                     <div class="col-sm-9">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot
-                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <p>Just Forgot that I had to mention something about someone to someone about how I
+                            forgot
+                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.
+                        </p>
                         <hr class="line_post">
+                        <p id="2" class="text-left"></p>
                         <div class="block-buttons">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-sm ">
+                                <button type="button" class="btn btn-default btn-sm " onclick="liked2()">
                                     <span class="glyphicon glyphicon-thumbs-up"></span> Like
                                 </button>
                                 <button type="button" class="btn btn-default btn-sm ">
@@ -122,12 +197,15 @@
                     </div>
 
                     <div class="col-sm-9">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot
-                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <p>Just Forgot that I had to mention something about someone to someone about how I
+                            forgot
+                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.
+                        </p>
                         <hr class="line_post">
+                        <p id="3" class="text-left"></p>
                         <div class="block-buttons">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-sm ">
+                                <button type="button" class="btn btn-default btn-sm" onclick="liked3()">
                                     <span class="glyphicon glyphicon-thumbs-up"></span> Like
                                 </button>
                                 <button type="button" class="btn btn-default btn-sm ">
@@ -146,12 +224,15 @@
                     </div>
 
                     <div class="col-sm-9">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I forgot
-                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+                        <p>Just Forgot that I had to mention something about someone to someone about how I
+                            forgot
+                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.
+                        </p>
                         <hr class="line_post">
+                        <p id="4" class="text-left"></p>
                         <div class="block-buttons">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default btn-sm ">
+                                <button type="button" class="btn btn-default btn-sm " onclick="liked4()">
                                     <span class="glyphicon glyphicon-thumbs-up"></span> Like
                                 </button>
                                 <button type="button" class="btn btn-default btn-sm ">
@@ -163,30 +244,27 @@
                 </div>
             </div>
 
-            <div class="col-sm-2 well"> Targeted Ads
-                <hr>
+            <div class="col-sm-2" id="ad">
                 <div class="well">
-                    <p>ADS</p>
+                    <b>Targeted Ads</b>
+                    <hr>
+                    <div class="row">
+                        <img src="ad1.png">
+                        <hr>
+                        <img src="ad1.png">
+                    </div>
                 </div>
                 <div class="well">
-                    <p>ADS</p>
-                </div>
-            </div>
-            <div class="col-sm-2 well"> Sponsored Ads
-                <hr>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
+                    <b>Sponsored Ads</b>
+                    <hr>
+                    <img src="ad2.png">
+                    <hr>
+                    <img src="ad2.png">
                 </div>
             </div>
         </div>
     </div>
-
-    <footer class="container-fluid text-center">
-        <p>Footer Text</p>
-    </footer>
+    </div>
 
 </body>
 
