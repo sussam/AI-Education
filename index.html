@@ -18,7 +18,7 @@
     <nav class="navbar">
         <div class=" container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Social</a>
+                <a class="navbar-brand" href="#">Shift</a>
             </div>
             <form class="navbar-form navbar-right" role="search">
                 <div class="form-group input-group">
@@ -31,7 +31,7 @@
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Sam</a></li>
+                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Tom</a></li>
             </ul>
         </div>
     </nav>
@@ -43,9 +43,9 @@
                     <p><b>Groups</b></p>
                     <hr>
                     <ul class="text-left" id="group_list">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> UF Class of 2021</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Humane Society</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> UF Women in CS</a></li>
+                        <li><span class="glyphicon glyphicon-user"></span> UF Gamers</li>
+                        <li><span class="glyphicon glyphicon-user"></span> UF Class of 2020</li>
+                        <li><span class="glyphicon glyphicon-user"></span> UF Business</li>
                     </ul>
                     <br>
                     <a href="groups.html"><button type="button" class="btn btn-default btn-sm btn-block">Discover
@@ -57,7 +57,7 @@
                     <ul class="text-left" id="suggested_friends">
                         <div class="row" id="individ_suggested">
                             <div class="col">
-                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
+                                <li><img src="pics/suggested_liam.jpg"></span> Liam
                                     <br> Tampa, Florida
                                 </li>
                             </div>
@@ -69,7 +69,18 @@
                         </div>
                         <div class="row" id="individ_suggested">
                             <div class="col">
-                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
+                                <li><img src="pics/suggested_noah.jpg"></span> Noah
+                                    <br>Sebastian, Florida</li>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-default btn-sm" type="button">
+                                    <span class="glyphicon glyphicon-plus"></span>Add
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row" id="individ_suggested">
+                            <div class="col">
+                                <li><img src="pics/suggested_oliver.jpg"></span> Oliver
                                     <br>Tampa, Florida</li>
                             </div>
                             <div class="col">
@@ -80,8 +91,8 @@
                         </div>
                         <div class="row" id="individ_suggested">
                             <div class="col">
-                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
-                                    <br>Tampa, Florida</li>
+                                <li><img src="pics/suggested_sam.jpg"></span> Sam
+                                    <br>Boca Raton, Florida</li>
                             </div>
                             <div class="col">
                                 <button class="btn btn-default btn-sm" type="button">
@@ -91,19 +102,8 @@
                         </div>
                         <div class="row" id="individ_suggested">
                             <div class="col">
-                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
-                                    <br>Tampa, Florida</li>
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-default btn-sm" type="button">
-                                    <span class="glyphicon glyphicon-plus"></span>Add
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row" id="individ_suggested">
-                            <div class="col">
-                                <li><a href="#"><img src="pic_test.png"></span> Katarina </a>
-                                    <br>Tampa, Florida</li>
+                                <li><img src="pics/suggested_caylee.jpg"></span> Caylee
+                                    <br>Tallahasee, Florida</li>
                             </div>
                             <div class="col">
                                 <button class="btn btn-default btn-sm" type="button">
@@ -136,17 +136,16 @@
 
                 <div class="row well" id="post_well">
                     <div class="col-sm-3">
-                        <img src="friend_photo.png">
+                        <img src="pics/friend_photo.png">
                         <p><b>John</b>
                             <br>1 hr ago</p>
                     </div>
 
                     <div class="col-sm-9" id="tags">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I
-                            forgot
-                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.
+                        <p>Enjoy this pic of me and my friends!
                         </p>
-                        <img src="tag_pic.jpg">
+                        <img src="pics/tag_photo.jpg">
+                        <p>Detected with: Josh</p>
                         <hr class="line_post">
                         <p id="1" class="text-left"></p>
                         <div class="block-buttons">
@@ -154,17 +153,21 @@
                                 <button type="button" class="btn btn-default btn-sm" onclick="liked1()">
                                     <span class="glyphicon glyphicon-thumbs-up"></span> Like
                                 </button>
-                                <button type="button" class="btn btn-default btn-sm ">
+                                <button type="button" class="btn btn-default btn-sm" id="comment_button"
+                                    onclick="comments()">
                                     <span class="glyphicon glyphicon-comment"></span> Comment
                                 </button>
                             </div>
                         </div>
+                        <!--<input type="text" id="write_comments" placeholder="Type here..." class="text-left">
+                        <div id="comment_posted"></div>-->
+
                     </div>
                 </div>
                 <div class="row well" id="comments">
                     <div class="col-sm-3">
-                        <img src="pic_test.png">
-                        Sarah
+                        <img src="pics/pic_test.png">
+                        Kevin
                     </div>
 
                     <div class="col-sm-9" id="tags">
@@ -175,16 +178,13 @@
 
                 <div class="row well" id="post_well">
                     <div class="col-sm-3">
-                        <img src="friend_photo.png">
-                        <p><b>John</b>
-                            <br>1 hr ago</p>
+                        <img src="pics/friend_david.jpg">
+                        <p><b>David</b>
+                            <br>5 hr ago</p>
                     </div>
 
                     <div class="col-sm-9">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I
-                            forgot
-                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.
-                        </p>
+                        Planning to sell my nintendo switch.
                         <hr class="line_post">
                         <p id="2" class="text-left"></p>
                         <div class="block-buttons">
@@ -202,16 +202,13 @@
 
                 <div class="row well" id="post_well">
                     <div class="col-sm-3">
-                        <img src="friend_photo.png">
-                        <p><b>John</b>
-                            <br>1 hr ago</p>
+                        <img src="pics/friend_josh.jpg">
+                        <p><b>Josh</b>
+                            <br>7 hrs ago</p>
                     </div>
 
                     <div class="col-sm-9">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I
-                            forgot
-                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.
-                        </p>
+                        Just got a new game. Excited to play it!
                         <hr class="line_post">
                         <p id="3" class="text-left"></p>
                         <div class="block-buttons">
@@ -229,16 +226,13 @@
 
                 <div class="row well" id="post_well">
                     <div class="col-sm-3">
-                        <img src="friend_photo.png">
-                        <p><b>John</b>
-                            <br>1 hr ago</p>
+                        <img src="pics/friend_patrick.jpg">
+                        <p><b>Patrick</b>
+                            <br>1 day ago</p>
                     </div>
 
                     <div class="col-sm-9">
-                        <p>Just Forgot that I had to mention something about someone to someone about how I
-                            forgot
-                            something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.
-                        </p>
+                        I'm soooo bored..
                         <hr class="line_post">
                         <p id="4" class="text-left"></p>
                         <div class="block-buttons">
@@ -260,17 +254,18 @@
                     <b>Targeted Ads</b>
                     <hr>
                     <div class="row">
-                        <img src="ad1.png">
+                        <a href="https://www.crunch.com"><img src="pics/guy_ad.png"></a>
                         <hr>
-                        <img src="ad1.png">
+                        <a href="http://www.americancampus.com"><img src="pics/targeted_ad.png"></a>
                     </div>
                 </div>
                 <div class="well">
                     <b>Sponsored Ads</b>
                     <hr>
-                    <img src="ad2.png">
+                    <a href="https://www.https://aeroon24th.com">
+                        <img src="pics/sponsored_ad.png"></a>
                     <hr>
-                    <img src="ad2.png">
+                    <a href="https://www.wayfair.com/"><img src="pics/ad1.png"></a>
                 </div>
             </div>
         </div>

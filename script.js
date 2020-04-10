@@ -1,3 +1,7 @@
+function liked0() {
+    document.getElementById("0").innerHTML = "1 Like";
+}
+
 function liked1() {
     document.getElementById("1").innerHTML = "1 Like";
 }
@@ -24,7 +28,7 @@ function post_now() {
         document.getElementById('input_post').innerHTML =
             "<div class='row well' id='post_well'>" +
             "<div class='col-sm-3'>" +
-            "<img src='friend_photo.png'> <p><b>John</b> <br>1 sec ago</p> </div>" +
+            "<img src='pics/persona_pic.png'> <p><b>Tom</b> <br>1 sec ago</p> </div>" +
             "<div class='col-sm-9'>"
             + post_text +
             "<br><br><br><hr class='line_post'><p id='0' class='text-left'></p>" +
@@ -37,3 +41,14 @@ function post_now() {
 
     });
 }
+
+/*function comments() {
+    var comment_button = document.getElementById('comment_button');
+    var comment_txt = document.getElementById('write_comments');
+
+    button.addEventListener('click', function () {
+        var write_comments = comment_txt;
+        targetField_comment = write_comments;
+        document.getElementById('comment_posted').innerHTML = targetField_comment;
+
+    }*/
