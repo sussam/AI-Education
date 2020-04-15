@@ -1,0 +1,392 @@
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>Shift</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/8556688861.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="home.css">
+    </head>
+
+    <!-- Collapsible content -->
+
+
+    <nav style="background-color:darkgreen;" class="navbar navbar-expand-sm  navbar-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="color:white" href="index.html">
+                    <h1>AI Learning Site</h1>
+                </a>
+                <img style="width:100px;height:100px;" src="pics/logo.png">
+            </div>
+        </div>
+    </nav>
+
+
+    <body data-spy="scroll" data-target="#side">
+        <div class="container position-relative">
+            <div class="anchor" id="content"></div>
+            <div class="row h-100">
+                <aside class="col-md-2" id="left">
+                    <div class="mt-5 mb-3 sticky-top" id="side">
+                        <ul class="nav flex-sm-column flex-row justify-content-between" id="sidenav">
+                            <a href="#1" class="nav-link active pl-0" style="padding: 0 !important;">Clustering</a>
+                            <a href="#2" class="nav-link pl-0" style="padding: 0 !important;">Clustering Interests</a>
+                            <a href="#3" class="nav-link pl-0" style="padding: 0 !important;">Likes</a>
+                            <a href="#4" class="nav-link pl-0" style="padding: 0 !important;">AI Trackings</a>
+                            <a href="#5" class="nav-link pl-0" style="padding: 0 !important;">IP Address Tracking</a>
+                            <a href="#6" class="nav-link pl-0" style="padding: 0 !important;">Collected Information</a>
+                            <a href="#7" class="nav-link pl-0" style="padding: 0 !important;">Suggestions using
+                                Self-Organizing Map</a>
+                            <a href="#8" class="nav-link pl-0" style="padding: 0 !important;">Machine Learning</a>
+                            <a href="#9" class="nav-link pl-0" style="padding: 0 !important;">How AI uses Deep
+                                Learning</a>
+                            <a href="#10" class="nav-link pl-0" style="padding: 0 !important;">Deep Learning
+                                Algorithm</a>
+                            <a href="#11" class="nav-link pl-0" style="padding: 0 !important;">How AI is used on a
+                                website</a>
+                            <a href="#12" class="nav-link pl-0" style="padding: 0 !important;">Interactions</a>
+                            <a href="#13" class="nav-link pl-0" style="padding: 0 !important;">Deep Learning with
+                                Languages</a>
+                            <a href="#14" class="nav-link pl-0" style="padding: 0 !important;">Comments</a>
+                            <a href="#15" class="nav-link pl-0" style="padding: 0 !important;">Tagging</a>
+                            <a href="#16" class="nav-link pl-0" style="padding: 0 !important;">Neural Networks with
+                                Tagging</a>
+                            <a href="#17" class="nav-link pl-0" style="padding: 0 !important;">Text Recognition</a>
+                            <a href="#18" class="nav-link pl-0" style="padding: 0 !important;">Neural Networks with
+                                Ads</a>
+                            <a href="#19" class="nav-link pl-0" style="padding: 0 !important;">Searches</a>
+                            <a href="#20" class="nav-link pl-0" style="padding: 0 !important;">Common Friends</a>
+                            <a href="#21" class="nav-link pl-0" style="padding: 0 !important;">How AI uses Searches</a>
+                        </ul>
+                    </div>
+                </aside>
+
+                <main class="col py-5" id="main">
+                    <div class="row position-relative">
+                        <div class="col">
+
+                            <div class="anchor" id="1" style="text-align: center;">
+                                <h1 style="background-color:lightgrey;">Clustering</h1>
+                                <img src="revised_gifs/2_social_media_clustering.gif" width=250 />
+                                <p>Based on the fact that you "liked" three pictures of dogs, the system performed
+                                    "clustering"
+                                    - meaning
+                                    the system found other people with similar interests (each of you liked pictures of
+                                    dogs)
+                                    and suggested
+                                    things that the systemre specific to those people that you had not yet liked (two
+                                    other
+                                    people who liked
+                                    dogs also liked cats, so the system thought you might be interested in cats).
+                                </p>
+                            </div>
+
+                            <div class="anchor" id="2" style="text-align: center;">
+                                <h1 style="background-color:lightgrey;">Clustering Interests</h1>
+                                <img src="revised_gifs/3_social_media_groupsyoumayLike.gif" width=250 />
+                                <p>We use clustering to figure out which groups you might be interested in by
+                                    determining
+                                    which
+                                    groups your
+                                    friends are in. The more friends you have in a group, the more likely we are to
+                                    recommend it
+                                    to you.
+                                    When you have an equal number of friends in two groups, we use other factors such as
+                                    location, interests
+                                    of the group compared to your interests, etc.</p>
+                            </div>
+
+                            <div class="anchor" id="3" style="text-align: center;">
+                                <h1 style="background-color:lightgrey;">Likes</h1>
+                                <img src="revised_gifs/4_social_media_tracksLikesAndTime.gif" width=250 />
+                                <p>We noticed that you spend a lot of time looking at pictures your friend Bob posts but
+                                    not
+                                    so
+                                    much time
+                                    looking at pictures Susan posts. The one difference is Susan's pictures of rabbits,
+                                    which
+                                    you look at
+                                    longer than any of Bob's pictures. We figured that out using anomaly detection. Now
+                                    we
+                                    know
+                                    to show you
+                                    Susan's rabbits, then all of Bob's posts, then Susan's other posts.</p>
+                            </div>
+
+                            <div class="anchor" id="4" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">AI Trackings</h1>
+                                <img src="revised_gifs/5_social_media_mouse_tracking.gif" width=250 />
+                                <p>The system uses artificial intelligence (AI) on the entire website because it is
+                                    constantly
+                                    updating what
+                                    it knows about you. It tracks where your mouse is, how long you stay on certain
+                                    parts of
+                                    the
+                                    website,
+                                    and which items you click on - and it makes assumptions of all these things and
+                                    compares
+                                    them to what
+                                    you actually do. This helps it build its neural networks, which are modeled after
+                                    the
+                                    brain.
+                                </p>
+                            </div>
+
+                            <div class="anchor" id="5" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">IP Address Tracking</h1>
+                                <img src="revised_gifs/6_social_media_ip_address_tracking.gif" width=250 />
+                                <p>The system collected information on what you watched and what you "liked" as well as
+                                    what
+                                    posts
+                                    you've
+                                    previously spent time on. It also determined where you are located based on your IP
+                                    address.
+                                    This
+                                    information supports the deployment of targeted ads..</p>
+                            </div>
+
+                            <div class="anchor" id="6" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Collected Information</h1>
+                                <img src="revised_gifs/7_social_media_collected_info.gif" width=250 />
+                                <p>We collect information about you such as your location from your IP address, and
+                                    other
+                                    information
+                                    that
+                                    you provide us with - such as your contacts.</p>
+                            </div>
+
+                            <div class="anchor" id="7" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Suggestions using Self-Organizing Map</h1>
+                                <img src="revised_gifs/8_social_media_selfOrganizingMap.gif" width=250 />
+                                <p>The AI takes into account your interests. Every time you join a group it suggests for
+                                    you, it
+                                    adds
+                                    some
+                                    information to its self-organizing map, so that it can make better suggestions in
+                                    the
+                                    future. (GIF
+                                    on
+                                    wikipedia)</p>
+                            </div>
+
+                            <div class="anchor" id="8" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Machine Learning</h1>
+                                <img src="revised_gifs/9_social_media_machineLearning.gif" width=250 />
+                                <p>Here we use Machine Learning, which means that we give the computer a whole bunch of
+                                    information and
+                                    see
+                                    if it can draw any conclusions from that information. In this case, our program is
+                                    trying to
+                                    guess
+                                    what
+                                    you're going to type next based on what you've searched for in the past.</p>
+                            </div>
+
+                            <div class="anchor" id="9" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">How AI uses Deep Learning</h1>
+                                <img src="revised_gifs/10_social_media_deepLearning.gif" width=250 />
+                                <p>Our deep learning algorithm reads through your posts and attaches users' words to
+                                    actions.
+                                    You
+                                    visited
+                                    her timeline and wished her a Happy Birthday, the deep learning algorithm allowed
+                                    the AI
+                                    to
+                                    learn
+                                    that
+                                    on someone's birthday you visit their timeline to wish them a happy birthday. In the
+                                    future,
+                                    the AI
+                                    may
+                                    put a link to Susan's timeline on your newsfeed.</p>
+                            </div>
+
+                            <div class="anchor" id="10" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Depp Learning Algorithm</h1>
+                                <img src="revised_gifs/11_social_media_addItemtoSellFuture.gif" width=250 />
+                                <p>Deep learning algorithm means that the program is constantly learning and associating
+                                    new
+                                    information
+                                    to
+                                    old information, to try to form an accurate idea of what you are trying to do. In
+                                    the
+                                    future, if you
+                                    click "add an item to sell" you may see suggestions for prices that you often use.
+                                </p>
+                            </div>
+
+                            <div class="anchor" id="11" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">How AI is used on a website</h1>
+                                <img src="revised_gifs/12_social_media_visitSite.gif" width=250 />
+                                <p>The AI tries to show you relevant information so that you will visit the website
+                                    again.
+                                    We
+                                    get paid
+                                    by
+                                    the advertising agency every time you look at or click on an advertisement on our
+                                    site.
+                                </p>
+                            </div>
+
+                            <div class="anchor" id="12" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Interactions</h1>
+                                <img src="revised_gifs/13_social_media_interactions.gif" width=250 />
+                                <p>The system learns about your interests, habits, likes, and dislikes through your
+                                    interactions
+                                    with
+                                    the
+                                    website. The system is then "smarter" and can predict which ads will be successful
+                                    in
+                                    marketing
+                                    goods
+                                    and services to you.</p>
+                            </div>
+
+                            <div class="anchor" id="13" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Deep Learning with Languages</h1>
+                                <img src="revised_gifs/14_social_media_deepLearning.gif" width=250 />
+                                <p>The system uses deep learning to analyze context of language. Deep learning monitors
+                                    things
+                                    like:
+                                    text
+                                    where we offer a service we could help you with, hate speech, suicidal intent, etc.
+                                    If
+                                    someone
+                                    writes
+                                    about selling something, for example, the user is prompted to use marketplace. </p>
+                            </div>
+
+                            <div class="anchor" id="14" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Comments</h1>
+                                <img src="revised_gifs/15_social_media_ethnicGroups.gif" width=250 />
+                                <p>Based on what you write in your comments (such as the type of language you use), the
+                                    program
+                                    tries to
+                                    determine which ethnic or cultural groups you may be part of. It can then find and
+                                    show
+                                    you
+                                    posts
+                                    people
+                                    with similar language have commented on or posted.</p>
+                            </div>
+
+                            <div class="anchor" id="15" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Tagging</h1>
+                                <img src="revised_gifs/16_social_media_thisisJulie.gif" width=250 />
+                                <p>This is an automatic tag. The AI was trained to recognize Bob's face from posts that
+                                    many
+                                    other
+                                    people
+                                    made. Neural networks that analyze facial features (distance between eyes, distance
+                                    between
+                                    eyes and
+                                    nose, etc) gave an output of "Bob" when the picture was uploaded.</p>
+                            </div>
+
+                            <div class="anchor" id="16" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Neural Networks with Tagging</h1>
+                                <img src="revised_gifs/17_social_media_neuralNetwork.gif" width=250 />
+                                <p>Whenever you tag someone in a post, the neural network is trained a bit more.
+                                    Training a
+                                    neural
+                                    network
+                                    is a bit like training a brain or teaching a child. If certain facial features get
+                                    from
+                                    a
+                                    face get
+                                    associated to a name often enough, soon the AI is able to identify faces.</p>
+                            </div>
+
+                            <div class="anchor" id="17" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Text Recognition</h1>
+                                <img src="revised_gifs/18_social_media_textRecognition.gif" width=250 />
+                                <p>You don't make enough posts by yourself to train our entire program (it's a bit like
+                                    training
+                                    a child
+                                    to
+                                    speak…. You don't make enough posts for the child to associate specific words to
+                                    specific
+                                    actions).
+                                    In
+                                    other words, the more text there is, the more the AI learns to recognize different
+                                    meanings
+                                    in text,
+                                    so
+                                    the AI is learns by tracking text from all users.</p>
+                            </div>
+
+                            <div class="anchor" id="18" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Neural Networks with Ads</h1>
+                                <img src="revised_gifs/19_social_media_adsClicked.gif" width=250 />
+                                <p>We used neural networks (modeled after the brain) to figure out that you like dogs a
+                                    lot
+                                    and
+                                    click on
+                                    posts containing them. Based on that, we like to show you ads that contain cute
+                                    animals.
+                                    The
+                                    more
+                                    ads
+                                    you click on, the more our company is paid.</p>
+                            </div>
+
+                            <div class="anchor" id="19" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Searches</h1>
+                                <img src="revised_gifs/20_social_media_searchAsType.gif" width=250 />
+                                <p>If you are typing something you've never searched for in the past, the AI sorts
+                                    through
+                                    the
+                                    language
+                                    and
+                                    searches that have occurred recently in areas around you. Based on this, the AI
+                                    makes a
+                                    guess as to
+                                    who
+                                    you might be looking for.</p>
+                            </div>
+
+                            <div class="anchor" id="20" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">Common Friends</h1>
+                                <img src="revised_gifs/21_social_media_peopleyoumayLike.gif" width=250 />
+                                <p>The AI figures out how many of your friends have other friends in common that you are
+                                    not
+                                    yet
+                                    friends
+                                    with (we call this clustering). It also reads through your contacts. We use this
+                                    information
+                                    together
+                                    with information about things you liked in to match you with people who have similar
+                                    interests as
+                                    you.
+                                </p>
+                            </div>
+
+                            <div class="anchor" id="21" style="text-align: center;">
+                                <h1 style="background-color:lightgrey">How AI uses Searches</h1>
+                                <img src="revised_gifs/22_social_media_searchAndLocationAndOtherRecent.gif" width=250 />
+                                <p>The AI collects lots of information for people search. For example, it collects your
+                                    search
+                                    history,
+                                    your
+                                    location, and other people's recent searches. All of this information is combine by
+                                    the
+                                    AI.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+    </body>
+
+    </html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Social Media</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Shift</a>
+            </div>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="Search..">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <a href="search.html"><span class="glyphicon glyphicon-search"></span></a>
+                        </button>
+                    </span>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span> Tom</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="col">
+        <div class="profile clearfix">
+            <div class="image">
+                <img src="pics/pic_test.png" class="img-cover">
+            </div>
+
+            <div class="user clearfix">
+                <div class="avatar">
+                    <img src="pics/search_sam5.jpg" class="img-thumbnail img-profile">
+                </div>
+                <h2>Susan Fisch</h2>
+            </div>
+
+            <div class="info">
+                <p><span class="glyphicon glyphicon-book"></span> University of Florida</p>
+                <p><span class="glyphicon glyphicon-globe"></span> Tampa, FL</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" id="whole">
+        <div class="col-sm-2"></div>
+
+
+
+        <div class="col-sm-7">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default text-left">
+                        <div class="panel-body">
+                            <p contenteditable="true">
+                                <span class="glyphicon glyphicon-user"></span> Create Post</p>
+                            <hr>
+                            <input type="text" id="post_txt" placeholder="What are you thinking?" class="text-left">
+                            <button type="button" class="btn btn-default btn-sm" id="post_button" onclick="post_now()">
+                                Post
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="input_post"></div>
+            <div class="row well" id="post_well">
+                <div class="col-sm-3">
+                    <img src="pics/search_sam5.jpg">
+                    <p><b>Susan</b>
+                        <br>1 hr ago</p>
+                </div>
+
+                <div class="col-sm-9">
+                    <p>Took a nap for 3 hours today. :(</p>
+                    <hr class="line_post">
+                </div>
+            </div>
+
+            <div class="row well" id="post_well">
+                <div class="col-sm-3">
+                    <img src="pics/search_sam5.jpg">
+                    <p><b>Susan</b>
+                        <br>1 days ago</p>
+                </div>
+
+                <div class="col-sm-9">
+                    <p>I've been on YouTube for the longest time. </p>
+                    <hr class="line_post">
+                </div>
+            </div>
+
+            <div class="row well" id="post_well">
+                <div class="col-sm-3">
+                    <img src="pics/search_sam5.jpg">
+                    <p><b>Susan</b>
+                        <br>3 days ago</p>
+                </div>
+
+                <div class="col-sm-9">
+                    <p>I can't stop watching cat videos!!!</p>
+                    <hr class="line_post">
+                </div>
+            </div>
+
+            <div class="row well" id="post_well">
+                <div class="col-sm-3">
+                    <img src="pics/search_sam5.jpg">
+                    <p><b>Susan</b>
+                        <br>5 days ago</p>
+                </div>
+
+                <div class="col-sm-9">
+                    <p>In need of a vacation!!</p>
+                    <hr class="line_post">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2 well"> Friends
+            <hr>
+            <div class="friends_prof">
+                <div class="row" id="individ_suggested">
+                    <div class="col">
+                        <li><img src="pics/friend_josh.jpg"></span> Josh
+                            <br> Gainesville, Florida
+                        </li>
+                    </div>
+                </div>
+                <div class="row" id="individ_suggested">
+                    <div class="col">
+                        <li><img src="pics/friend_kevin.jpg"></span> Kevin
+                            <br> Boca Raton, Florida
+                        </li>
+                    </div>
+                </div>
+                <div class="row" id="individ_suggested">
+                    <div class="col">
+                        <li><img src="pics/friend_david.jpg"></span> David
+                            <br> Tampa, Florida
+                        </li>
+                    </div>
+                </div>
+                <div class="row" id="individ_suggested">
+                    <div class="col">
+                        <li><img src="pics/friend_patrick.jpg"></span> Patrick
+                            <br> Tampa, Florida
+                        </li>
+                    </div>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+
+</body>
+
+</html>

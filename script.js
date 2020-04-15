@@ -28,7 +28,7 @@ function post_now() {
         document.getElementById('input_post').innerHTML =
             "<div class='row well' id='post_well'>" +
             "<div class='col-sm-3'>" +
-            "<img src='pics/persona_pic.png'> <p><b>Tom</b> <br>1 sec ago</p> </div>" +
+            "<img src='pics/search_sam5.jpg'> <p><b>Susan</b> <br>1 sec ago</p> </div>" +
             "<div class='col-sm-9'>"
             + post_text +
             "<br><br><br><hr class='line_post'><p id='0' class='text-left'></p>" +
